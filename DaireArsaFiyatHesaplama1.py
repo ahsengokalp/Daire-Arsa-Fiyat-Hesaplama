@@ -35,6 +35,23 @@ def arsa_fiyat_dıkdortgen(konum,kenar1,kenar2):
     elif konum==3:
         sonuc=kirsal*dıkdortgen_cevre_hesaplama(kenar1,kenar2)*1000
         return sonuc
+ def metrekare(en, boy):
+        sonuc = en * boy
+        return sonuc
+
+def daire_fiyati(kat, en, boy):
+        ARA_KAT = 2
+        UST_KAT = 1.6
+        ZEMIN_KAT = 0.9
+        if kat == 1:
+            sonuc = ARA_KAT * metrekare(en, boy) * 5000
+            return sonuc
+        elif kat == 2:
+            sonuc = UST_KAT * metrekare(en, boy) * 5000
+            return sonuc
+        elif kat == 3:
+            sonuc = ZEMIN_KAT * metrekare(en, boy) * 5000
+            return sonuc
 cikis='h'
 while cikis!='E' and cikis!='e':
     print("1-Daire Fiyati Hesaplama")
