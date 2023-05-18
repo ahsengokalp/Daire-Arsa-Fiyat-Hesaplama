@@ -22,6 +22,19 @@ def arsa_fiyat_cember(konum,yaricap):
     elif konum==3:
         sonuc=kirsal*cember_cevre_hesaplama(yaricap)*1000
         return sonuc
+def arsa_fiyat_dıkdortgen(konum,kenar1,kenar2):
+    global deniz_kenari
+    global sehir_merkezi
+    global kirsal
+    if konum==1:
+        sonuc=deniz_kenari*dıkdortgen_cevre_hesaplama(kenar1,kenar2)*1000
+        return sonuc
+    elif konum==2:
+        sonuc=sehir_merkezi*dıkdortgen_cevre_hesaplama(kenar1,kenar2)*1000
+        return sonuc
+    elif konum==3:
+        sonuc=kirsal*dıkdortgen_cevre_hesaplama(kenar1,kenar2)*1000
+        return sonuc
 cikis='h'
 while cikis!='E' and cikis!='e':
     print("1-Daire Fiyati Hesaplama")
